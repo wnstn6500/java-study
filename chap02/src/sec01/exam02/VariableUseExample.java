@@ -1,4 +1,4 @@
-package exam02;
+package sec01.exam02;
 
 public class VariableUseExample {
 	public static void main(String[] args) {
