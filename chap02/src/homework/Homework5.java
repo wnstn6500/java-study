@@ -13,8 +13,8 @@ public class Homework5 {
 		System.out.println("수학 점수를 입력하세요");
 		float math = sc.nextFloat();
 		
-		int sum = (int)language + (int)english + (int)math;
-		int average = ((int)language + (int)english + (int)math)/ 3;
+		int sum = (int)(language + english + math);
+		int average = (int)(language + english + math) / 3;
 		
 		System.out.println("국어 :" + (int)language);
 		System.out.println("영어 :" + (int)english);
