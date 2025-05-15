@@ -8,11 +8,13 @@ public class Homework01 {
 		
 		System.out.print("몸무게를 입력해주세요:");
 		float kg = sc.nextFloat();
+		
 		System.out.print("키를 입력해주세요:");
 		float height = sc.nextFloat() / 100;
-		float Bmi = kg / (height * height);
+		
+		float bmi = kg / (height * height);
 		
 		
-		System.out.printf("BMI지수는 %.1f 입니다." , Bmi);
+		System.out.printf("BMI지수는 %.1f 입니다." , bmi);
 	}
 }

@@ -14,7 +14,7 @@ public class Homework5 {
 		float math = sc.nextFloat();
 		
 		int sum = (int)(language + english + math);
-		int average = (int)(language + english + math) / 3;
+		int average = sum / 3;
 		
 		System.out.println("국어 :" + (int)language);
 		System.out.println("영어 :" + (int)english);
