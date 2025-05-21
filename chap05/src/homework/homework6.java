@@ -13,6 +13,7 @@ public class homework6 {
 		System.out.print("배열의 크기를 입력하세요:");
 		String [] array = new String[sc.nextInt()];
 		sc.nextLine();
+		
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(i + 1 + "번째 문자열 : ");
 			array[i] = sc.nextLine(); 

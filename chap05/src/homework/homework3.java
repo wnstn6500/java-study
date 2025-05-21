@@ -11,6 +11,8 @@ public class homework3 {
 		
 		System.out.print("정수 : ");
 		int num = sc.nextInt();
+		
+		
 		while(num < 3 || num % 2 == 0) {
 			System.out.println("다시 입력하세요.");
 			System.out.print("정수 : ");
