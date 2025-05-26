@@ -11,16 +11,21 @@ public class Student extends Person{
 	
 	public Student(String name, int age, double height, double weight, 
 			int grade, String major){
-		
+		this.name = name;
 		setAge(age);
 		setHeight(height);
 		setWeight(weight);
 		getAge();
 		getHeight();
 		getWeight();
+		this.grade = grade;
+		this.major = major;
 	}
 	
-	public void toString(String name) {
-		
+	@Override
+	public String toString() {
+		return "=== " + name + " ===" + "\n나이: " + getAge() + "\n키 : " + getHeight() + "\n몸무게 : "
+				+ getWeight() + " \n학년 : "+ grade + "\n전공 : " + major; 
 	}
+	
 }

@@ -10,9 +10,15 @@ public class Employee extends Person{
 	
 	public Employee(String name, int age, double height, double weight, 
 			int salary, String dept){
+		this.name = name;
 		setAge(age);
 		setHeight(height);
 		setWeight(weight);
+		getAge();
+		getHeight();
+		getWeight();
+		this.salary = salary;
+		this.dept = dept;
 	}
 	
 	public void toString(String name) {
