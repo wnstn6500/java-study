@@ -17,12 +17,16 @@ public class Person {
 		this.weight = weight;
 	}
 	
-	@Override
+	
 	public String toString() {
-		return "=== " + name + " ===" + "\n나이: " + age + "\n키 : " + height + "\n몸무게 : "
-				+ weight; 
+		return "";
+		
 	}
 
+	
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 	
 	public int getAge() {

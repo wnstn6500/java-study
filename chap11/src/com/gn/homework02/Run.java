@@ -13,13 +13,11 @@ public class Run {
 		list.add("울산광역시 남구 문수로 233");
 		list.add("경상북도 구미시 송정대로 55");
 		
+		
+		
 		for (String s : list) {
 			String result = practice.takeState(s);
-			if (!result.equals("")) {
-				System.out.println(result);
-			} else {
-				System.out.println("null");
-			}
+			System.out.println(result);
 		}
 		
 	}

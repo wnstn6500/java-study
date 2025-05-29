@@ -14,8 +14,8 @@ public class Run {
 		
 		for (int i = 0; i < person1.length; i++) {
 			
-			people[i] = new Person();
 			String[] parts = person1[i].split(",");
+			people[i] = new Person();
 			people[i].setName(parts[0]);
 			people[i].setAge(Integer.parseInt(parts[1]));
 			people[i].setAddress(parts[2]);

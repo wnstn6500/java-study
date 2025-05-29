@@ -13,7 +13,7 @@ public class Practice {
 		}
 		
 		
-		return ""; // 해당 조건 없을경우 빈 문자열 반환
+		return null; // 해당 조건 없을경우 빈 문자열 반환
 		
 	}
 
