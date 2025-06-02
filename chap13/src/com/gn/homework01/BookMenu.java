@@ -95,13 +95,39 @@ public class BookMenu {
 		System.out.print("검색어 : ");
 		String keyword = sc.nextLine();
 		
+		List <Book> searchList = bc.searchBook(keyword);
+		
+		if(searchList.isEmpty()) {
+			System.out.println("검색 결과가 없습니다.");
+		} else {
+			for (Book book : searchList) {
+				System.out.println(book);
+			}
+		}
 	}
 	
 	public void deleteBook() {
+		System.out.println("삭제할 도서명 입력:");
+		String title = sc.next();
 		
+		System.out.println("삭제할 저자명 입력:");
+		String author = sc.next();
+		
+		Book remove = bc.deleteBook(title, author);
+		
+		if(remove != null) {
+			System.out.println("성공적으로 삭제되었습니다: " + remove);
+		} else {
+			System.out.println("삭제할 도서를 찾지 못했습니다.");
+		}
 	}
 	
 	public void ascBook() {
-		
+		if (1 == bc.ascBook()) {
+			System.out.println("정렬에 성공하였습니다.");
+			selectList();
+		} else {
+			System.out.println("정렬에 실패하였습니다.");
+		}
 	}
 }
