@@ -50,14 +50,20 @@ public class LotteryMenu {
 			String name = sc.nextLine();
 			System.out.print("휴대폰 번호(-빼고) : ");
 			String callNum = sc.nextLine();
-			Lottery lt = new Lottery(name,callNum);
-			if(lc.equals(lt)) {
-				System.out.println("중복된 대상입니다. 다시 출력하세요.");
-				continue;
-			}
-			lc.insertObject(lt);
 			
-			count++;
+			Lottery lt = new Lottery(name,callNum);
+			
+			boolean result = lc.insertObject(lt);
+			
+			if(result) {
+				count++;
+			} else {
+				System.out.println("중복된 대상입니다. 다시 입력해주세요");
+				i--;
+			}
+			
+			
+			
 		}
 		System.out.println(count+ "명 추가 완료했습니다.");
 	}

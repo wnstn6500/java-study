@@ -13,8 +13,8 @@ public class LotteryController {
 	
 	public boolean insertObject(Lottery l) {
 		HashSet<Lottery> lottry = new HashSet<Lottery>();
-		lottry.add(l);
-		return true;
+		
+		return lottery.add(l);
 	}
 	
 	public boolean deleteObject(Lottery l) {
