@@ -36,7 +36,7 @@ public class Lottery implements Comparable<Lottery>{
 	@Override
 	public String toString() {
 		
-		return "이름 ="+name+"휴대폰 번호=" + phone;
+		return "[이름 = "+name+", 휴대폰 번호=" + phone+"]";
 	}
 
 	@Override

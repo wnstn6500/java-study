@@ -1,6 +1,9 @@
 package com.gn.homework02.view;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 import com.gn.homework02.controller.LotteryController;
 import com.gn.homework02.model.vo.Lottery;
@@ -23,16 +26,33 @@ public class LotteryMenu {
 			System.out.println("9. 종료");
 			System.out.print("메뉴 번호 : ");
 			int menuNum = sc.nextInt();
+			sc.nextLine();
 			switch (menuNum) {
-			case 1: {
+			case 1: 
 				insertObject();
+				break;
+			
+			case 2: 
+				deleteObject();
+				break;
+			case 3:
+				searchObject();
+				break;
+			case 4:
+				winObject();
+				break;
+			case 5:
+				searchObject();
+				break;
+			case 6:
+				searchObject();
+				break;	
+
 				
-			}
-			
-			
+				
 			case 9: {
 				System.out.println("프로그램 종료");
-				break;
+				return;
 			}
 			}
 			
@@ -69,15 +89,36 @@ public class LotteryMenu {
 	}
 	
 	public void deleteObject() {
+		System.out.println("===== 2. 추첨 대상 삭제 =====");
+		System.out.println("삭제할 대상의 이름과 핸드폰 번호를 입력하세요.");
+		System.out.print("이름 : ");
+		String name = sc.nextLine();
+		System.out.print("핸드폰 번호('-'빼고) : ");
+		String number = sc.nextLine();
 		
+		Lottery lt = new Lottery(name, number);
+		boolean result = lc.deleteObject(lt);
+		if(result == true) {
+			System.out.println("삭제 완료되었습니다.");
+		} else {
+			System.out.println("존재하지 않는 대상입니다.");
+		}
 	}
 	
 	public void searchObject() {
-		
+		System.out.println(lc.searchObject());
 		
 	}
 	
 	public void winObject() {
+		
+		System.out.println("===== 4. 당첨 대상 구성 =====");
+		if(lc.winObject() == null) {
+			System.out.println("추첨 대상이 4명 이상이어야 당첨 대상을 구성할 수 있습니다.");
+		} else {
+			
+			System.out.println(lc.winObject());
+		}
 		
 		
 	}
