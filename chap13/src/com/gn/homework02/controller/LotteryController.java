@@ -62,15 +62,15 @@ public class LotteryController {
 		
 	}
 	
-	public Set<Lottery> sortedWinObject(){
-		
-		
-	}
+//	public Set<Lottery> sortedWinObject(){
+//		
+//		
+//	}
 	
-	public boolean searchWinner(Lottery l) {
-		
-		
-		
-	}
+//	public boolean searchWinner(Lottery l) {
+//		
+//		
+//		
+//	}
 	
 }
